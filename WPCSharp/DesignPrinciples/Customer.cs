@@ -14,26 +14,8 @@ namespace DesignPrinciples
         }
 
         public int Id { get; }
-        public float Income { get; private set; }
-        public float Outcome { get; private set; }
+        public string Name { get; set; }
 
-        public float AllowedDebit { get; set; }
-
-        public float Balance => Income - Outcome;
-
-        public bool Charge(float amount)
-        {
-            if(Balance + AllowedDebit < amount)
-            {
-                return false;
-            }
-            Outcome += amount;
-            return true;
-        }
-
-        public void Fund(float amount)
-        {
-            Income += amount;
-        }
+        public PaymentAccount PaymentAccount { get; } = new PaymentAccount();
     }
 }

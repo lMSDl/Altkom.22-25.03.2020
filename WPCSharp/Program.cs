@@ -11,15 +11,19 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            var service = new Service();
+            var customerService = new CustomerService();
+            var customer = customerService.FindCustomerById(1);
 
-            var customerId = 1;
+            var paymentService = new PaymentService();
 
-            service.Fund(customerId, 500);
-            if (service.Change(customerId, 100))
-                Console.WriteLine($"Customer {customerId} charged. Actual balance: {service.GetBalance(customerId)}");
+
+            paymentService.Fund(customer, 500);
+            var result = paymentService.Change(customer, 100);
+            var balance = customer.PaymentAccount.Balance;
+            if (result)
+                Console.WriteLine($"Customer {customer.Id} charged. Actual balance: {balance}");
             else
-                Console.WriteLine($"Not enought founds on customer {customerId} acconut! Actual balance: {service.GetBalance(customerId)}");
+                Console.WriteLine($"Not enought founds on customer {customer.Id} acconut! Actual balance: {balance}");
 
             Console.ReadKey();
         }
