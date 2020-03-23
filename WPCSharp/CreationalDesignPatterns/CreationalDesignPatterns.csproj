@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E55DB339-3EB6-4714-905E-1753FEA1C194}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WPCSharp</RootNamespace>
-    <AssemblyName>WPCSharp</AssemblyName>
+    <ProjectGuid>{D7AEBEFC-85F7-41D1-94C9-5AFFBB634579}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreationalDesignPatterns</RootNamespace>
+    <AssemblyName>CreationalDesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Builder\Client.cs" />
+    <Compile Include="Builder\Director.cs" />
+    <Compile Include="Builder\Vehicle.cs" />
+    <Compile Include="Builder\ABuilder.cs" />
+    <Compile Include="Builder\VehicleProduct.cs" />
+    <Compile Include="Builder\VehicleProductBuilder.cs" />
+    <Compile Include="Builder\VehicleStringBuilder.cs" />
+    <Compile Include="Builder\VehicleBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="CreationalDesignPatterns\CreationalDesignPatterns.csproj">
-      <Project>{d7aebefc-85f7-41d1-94c9-5affbb634579}</Project>
-      <Name>CreationalDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="DesignPrinciples\DesignPrinciples.csproj">
-      <Project>{4DCBC788-5B79-4865-83CE-606D3E6B08CE}</Project>
-      <Name>DesignPrinciples</Name>
-    </ProjectReference>
-    <ProjectReference Include="SOLID\SOLID.csproj">
-      <Project>{85c31acf-35ed-46cc-b320-fcbcffc8ca28}</Project>
-      <Name>SOLID</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

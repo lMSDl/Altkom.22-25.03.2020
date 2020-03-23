@@ -12,9 +12,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            ISumCalculator sumCalculator = new SumOddCalculator();
-            var result = sumCalculator.Sum(1, 2, 3, 4, 5);
-            Console.WriteLine(result);
+            CreationalDesignPatterns.Builder.Client.Execute();
 
             Console.ReadKey();
         }
