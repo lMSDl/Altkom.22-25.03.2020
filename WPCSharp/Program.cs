@@ -1,4 +1,5 @@
 ﻿using DesignPrinciples;
+using SOLID.L;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,15 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            
+            ISumCalculator sumCalculator = new SumOddCalculator();
+            var result = sumCalculator.Sum(1, 2, 3, 4, 5);
+            Console.WriteLine(result);
+
+            Console.ReadKey();
         }
 
-        private static DesignPrinciples()
+
+        private static void DesignPrinciples()
         {
             var customerService = new CustomerService();
             var customer = customerService.FindCustomerById(1);
@@ -29,7 +35,6 @@ namespace WPCSharp
             else
                 Console.WriteLine($"Not enought founds on customer {customer.Id} acconut! Actual balance: {customer.PaymentAccount.Balance}");
 
-            Console.ReadKey();
         }
     }
 }

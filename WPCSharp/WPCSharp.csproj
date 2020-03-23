@@ -54,6 +54,10 @@
       <Project>{4DCBC788-5B79-4865-83CE-606D3E6B08CE}</Project>
       <Name>DesignPrinciples</Name>
     </ProjectReference>
+    <ProjectReference Include="SOLID\SOLID.csproj">
+      <Project>{85c31acf-35ed-46cc-b320-fcbcffc8ca28}</Project>
+      <Name>SOLID</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
