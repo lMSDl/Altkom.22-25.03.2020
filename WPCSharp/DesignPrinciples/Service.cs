@@ -21,11 +21,7 @@ namespace DesignPrinciples
             if (customer == null)
                 return false;
 
-            if (GetBalance(id) < amount)
-                return false;
-
-            customer.Outcome += amount;
-            return true;
+            return customer.Charge(amount);
         }
 
         public void Fund(int customerId, float amount)
@@ -33,13 +29,7 @@ namespace DesignPrinciples
             var customer = FindCustomerById(customerId);
             if (customer == null)
                 return;
-            customer.Income += amount;
-        }
-
-        public float? GetBalance(int customerId)
-        {
-            var customer = FindCustomerById(customerId);
-            return customer?.Income - customer?.Outcome + customer.AllowedDebit;
+            customer.Fund(amount);
         }
     }
 }
