@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISP.cs" />
     <Compile Include="LSP3.cs" />
     <Compile Include="LSP1.cs" />
     <Compile Include="LSP2.cs" />
