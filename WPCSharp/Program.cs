@@ -16,14 +16,13 @@ namespace WPCSharp
 
             var paymentService = new PaymentService();
 
+            paymentService.Fund(customer.PaymentAccount, 500);
 
-            paymentService.Fund(customer, 500);
-            var result = paymentService.Change(customer, 100);
-            var balance = customer.PaymentAccount.Balance;
+            var result = paymentService.Change(customer.PaymentAccount, 100);
             if (result)
-                Console.WriteLine($"Customer {customer.Id} charged. Actual balance: {balance}");
+                Console.WriteLine($"Customer {customer.Id} charged. Actual balance: {customer.PaymentAccount.Balance}");
             else
-                Console.WriteLine($"Not enought founds on customer {customer.Id} acconut! Actual balance: {balance}");
+                Console.WriteLine($"Not enought founds on customer {customer.Id} acconut! Actual balance: {customer.PaymentAccount.Balance}");
 
             Console.ReadKey();
         }
