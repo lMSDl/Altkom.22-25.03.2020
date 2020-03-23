@@ -11,6 +11,11 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
+            
+        }
+
+        private static DesignPrinciples()
+        {
             var customerService = new CustomerService();
             var customer = customerService.FindCustomerById(1);
 
