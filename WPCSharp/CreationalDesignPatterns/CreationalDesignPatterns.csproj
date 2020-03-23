@@ -49,6 +49,13 @@
     <Compile Include="Builder\VehicleProductBuilder.cs" />
     <Compile Include="Builder\VehicleBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\Client.cs" />
+    <Compile Include="Singleton\Context.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Singleton\settings.txt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
