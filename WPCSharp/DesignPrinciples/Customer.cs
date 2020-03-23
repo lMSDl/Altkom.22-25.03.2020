@@ -18,7 +18,5 @@ namespace DesignPrinciples
         public float Outcome { get; set; }
 
         public float AllowedDebit { get; set; }
-
-        public bool HasDebit => Income - Outcome < 0;
     }
 }

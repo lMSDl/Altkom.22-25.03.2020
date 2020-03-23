@@ -10,16 +10,6 @@ namespace DesignPrinciples
     {
         private ICollection<Customer> Customers { get; } = new List<Customer> { new Customer(1), new Customer(2), new Customer(3), new Customer(4), new Customer(5) };
 
-        public bool DeleteCustomer(Customer param)
-        {
-            return Customers.Remove(param);
-        }
-
-        public Customer FindCustomerByAllowedDebit(float allowedDebit)
-        {
-            return Customers.SingleOrDefault(x => x.AllowedDebit == allowedDebit);
-        }
-
         public Customer FindCustomerById(int customerId)
         {
            return Customers.SingleOrDefault(x => x.Id == customerId);
