@@ -10,14 +10,18 @@ namespace CreationalDesignPatterns.Builder
     {
         public static void Execute()
         {
-            var director = new Director();
-            director.Builder = new VehicleBuilder();
-            var vehicle = director.Make();
-            Console.WriteLine(vehicle.ToString());
-            director.Builder = new VehicleStringBuilder();
-            var vehicleManual = director.Make();
+            var builder = new VehicleBuilderFacade();
+            var vehicle = builder
+                .Data
+                    .SetDoors(4)
+                    .SetTrunk(200)
+                    .SetWheels(4)
+                .Product
+                    .SetManufacturer("Altkom")
+                    .SetModelName("AbC")
+                .Build();
 
-            Console.WriteLine(vehicleManual.ToString());
+            Console.WriteLine(vehicle.ToString());
 
         }
     }

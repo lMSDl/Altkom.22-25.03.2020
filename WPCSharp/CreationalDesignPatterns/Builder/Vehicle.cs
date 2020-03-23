@@ -34,9 +34,9 @@ namespace CreationalDesignPatterns.Builder
         //}
 
 
-        //public override string ToString()
-        //{
-        //    return $"Vehicle has {Wheels} wheels, {Seats} seats, {Doors} doors" + (TrunckCapacity.HasValue ? $", trunk capacity {TrunckCapacity}l" : "") + " and " + (EnginePower.HasValue ? $"engine with {EnginePower}HP" : "no engine");
-        //}
+       public override string ToString()
+        { 
+           return $"Vehicle has {Wheels} wheels, {Seats} seats, {Doors} doors" + (TrunckCapacity.HasValue ? $", trunk capacity {TrunckCapacity}l" : "") + " and " + (EnginePower.HasValue ? $"engine with {EnginePower}HP" : "no engine");
+        }
     }
 }

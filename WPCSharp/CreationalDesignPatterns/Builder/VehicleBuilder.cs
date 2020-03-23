@@ -6,53 +6,41 @@ using System.Threading.Tasks;
 
 namespace CreationalDesignPatterns.Builder
 {
-    public class VehicleBuilder : ABuilder
+    public class VehicleBuilder : VehicleBuilderFacade
     {
-        protected Vehicle Vehicle { get; }
-
-        public VehicleBuilder()
+        public VehicleBuilder(VehicleProduct vehicle) : base(vehicle)
         {
-            Vehicle = new Vehicle();
+
         }
 
-        protected VehicleBuilder(Vehicle vehicle)
-        {
-            Vehicle = vehicle;
-        }
-
-        public override ABuilder SetDoors(int doors)
+        public VehicleBuilder SetDoors(int doors)
         {
             Vehicle.Doors = doors;
             return this;
         }
 
-        public override ABuilder SetSeets(int seats)
+        public VehicleBuilder SetSeets(int seats)
         {
             Vehicle.Seats = seats;
             return this;
         }
 
-        public override ABuilder SetEngine(int power)
+        public VehicleBuilder SetEngine(int power)
         {
             Vehicle.EnginePower = power;
             return this;
         }
 
-        public override ABuilder SetTrunk(int capacity)
+        public VehicleBuilder SetTrunk(int capacity)
         {
             Vehicle.TrunckCapacity = capacity;
             return this;
         }
 
-        public override ABuilder SetWheels(int wheels)
+        public VehicleBuilder SetWheels(int wheels)
         {
             Vehicle.Wheels = wheels;
             return this;
-        }
-
-        public override object Build()
-        {
-            return Vehicle;
         }
     }
 }

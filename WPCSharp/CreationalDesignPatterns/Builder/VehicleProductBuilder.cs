@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace CreationalDesignPatterns.Builder
 {
-    public class VehicleProductBuilder : VehicleBuilder
+    public class VehicleProductBuilder : VehicleBuilderFacade
     {
-        public VehicleProductBuilder() : base(new VehicleProduct())
+        public VehicleProductBuilder(VehicleProduct vehicle) : base(vehicle)
         {
 
         }
 
         public VehicleProductBuilder SetManufacturer(string manufacturer)
         {
-            ((VehicleProduct)Vehicle).Manufacturer = manufacturer;
+            Vehicle.Manufacturer = manufacturer;
             return this;
         }
         public VehicleProductBuilder SetModelName(string modelName)
         {
-            ((VehicleProduct)Vehicle).ModelName = modelName;
+            Vehicle.ModelName = modelName;
             return this;
         }
     }

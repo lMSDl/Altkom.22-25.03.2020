@@ -42,12 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builder\Client.cs" />
-    <Compile Include="Builder\Director.cs" />
     <Compile Include="Builder\Vehicle.cs" />
-    <Compile Include="Builder\ABuilder.cs" />
+    <Compile Include="Builder\VehicleBaseBuilder.cs" />
+    <Compile Include="Builder\VehicleBuilderFacade.cs" />
     <Compile Include="Builder\VehicleProduct.cs" />
     <Compile Include="Builder\VehicleProductBuilder.cs" />
-    <Compile Include="Builder\VehicleStringBuilder.cs" />
     <Compile Include="Builder\VehicleBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
