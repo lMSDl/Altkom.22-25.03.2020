@@ -62,6 +62,12 @@
     <Compile Include="Composition\Client.cs" />
     <Compile Include="Composition\IPriceCalculator.cs" />
     <Compile Include="Composition\Product.cs" />
+    <Compile Include="Decorator\BaseDecorator.cs" />
+    <Compile Include="Decorator\Client.cs" />
+    <Compile Include="Decorator\INotification.cs" />
+    <Compile Include="Decorator\EmailNotification.cs" />
+    <Compile Include="Decorator\SmsNotification.cs" />
+    <Compile Include="Decorator\Notification.cs" />
     <Compile Include="Facade\Client.cs" />
     <Compile Include="Facade\JsonSerializerSettingsFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
