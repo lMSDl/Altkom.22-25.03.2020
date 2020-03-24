@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,10 +71,18 @@
     <Compile Include="Decorator\Notification.cs" />
     <Compile Include="Facade\Client.cs" />
     <Compile Include="Facade\JsonSerializerSettingsFacade.cs" />
+    <Compile Include="Flyweight\CarFlyweight.cs" />
+    <Compile Include="Flyweight\Car.cs" />
+    <Compile Include="Flyweight\FlyweightFactory.cs" />
+    <Compile Include="Flyweight\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\Client.cs" />
+    <Compile Include="Proxy\Database.cs" />
+    <Compile Include="Proxy\DatabaseProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
