@@ -51,6 +51,17 @@
     <Compile Include="Adapter\PersonDb.cs" />
     <Compile Include="Adapter\Person.cs" />
     <Compile Include="Adapter\PersonToStringAdapter.cs" />
+    <Compile Include="Bridge\Client.cs" />
+    <Compile Include="Bridge\IMessageServiceImplementation.cs" />
+    <Compile Include="Bridge\ShortMessageServiceAbstraction.cs" />
+    <Compile Include="Bridge\MessageServiceAbstraction.cs" />
+    <Compile Include="Bridge\EmailServiceImplementation.cs" />
+    <Compile Include="Bridge\SmsServiceImplementation.cs" />
+    <Compile Include="Composition\BaseProduct.cs" />
+    <Compile Include="Composition\Box.cs" />
+    <Compile Include="Composition\Client.cs" />
+    <Compile Include="Composition\IPriceCalculator.cs" />
+    <Compile Include="Composition\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
