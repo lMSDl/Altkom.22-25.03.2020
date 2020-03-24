@@ -16,7 +16,7 @@ namespace CreationalDesignPatterns.Singleton
         {
             Console.WriteLine("Initializing singleton object");
 
-            var elements = File.ReadAllLines("settings.txt");
+            var elements = File.ReadAllLines($"Singleton{Path.DirectorySeparatorChar}settings.txt");
             for (int i = 0; i < elements.Length; i+=2)
             {
                 _settings.Add(elements[i], elements[i + 1]);

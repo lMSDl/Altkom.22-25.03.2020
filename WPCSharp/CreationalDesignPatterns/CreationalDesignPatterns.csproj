@@ -53,9 +53,9 @@
     <Compile Include="Singleton\Context.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Singleton\settings.txt.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="Singleton\settings.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
