@@ -62,6 +62,8 @@
     <Compile Include="Composition\Client.cs" />
     <Compile Include="Composition\IPriceCalculator.cs" />
     <Compile Include="Composition\Product.cs" />
+    <Compile Include="Facade\Client.cs" />
+    <Compile Include="Facade\JsonSerializerSettingsFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
