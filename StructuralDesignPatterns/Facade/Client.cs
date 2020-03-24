@@ -14,7 +14,7 @@ namespace StructuralDesignPatterns.Facade
             var settings = new JsonSerializerSettingsFacade();
             settings.NullValueHandling = NullValueHandling.Ignore;
             settings.ReferenceLoopHandling = ReferenceLoopHandling.Serialize;
-            Serialize(new object, settings);
+            Serialize(new object(), settings);
         }
 
         public static void Serialize(object x, JsonSerializerSettingsFacade settings)
