@@ -12,7 +12,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            CreationalDesignPatterns.Singleton.Client.Execute();
+            StructuralDesignPatterns.Adapter.Client.Execute();
 
             Console.ReadKey();
         }

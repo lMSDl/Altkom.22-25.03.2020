@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E55DB339-3EB6-4714-905E-1753FEA1C194}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WPCSharp</RootNamespace>
-    <AssemblyName>WPCSharp</AssemblyName>
+    <ProjectGuid>{58CA2A9D-1506-4449-8E19-1D3CBEFE396F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StructuralDesignPatterns</RootNamespace>
+    <AssemblyName>StructuralDesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,29 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Adapter\Client.cs" />
+    <Compile Include="Adapter\PersonDb.cs" />
+    <Compile Include="Adapter\Person.cs" />
+    <Compile Include="Adapter\PersonToStringAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StructuralDesignPatterns\StructuralDesignPatterns.csproj">
-      <Project>{58ca2a9d-1506-4449-8e19-1d3cbefe396f}</Project>
-      <Name>StructuralDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="CreationalDesignPatterns\CreationalDesignPatterns.csproj">
-      <Project>{d7aebefc-85f7-41d1-94c9-5affbb634579}</Project>
-      <Name>CreationalDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="DesignPrinciples\DesignPrinciples.csproj">
-      <Project>{4DCBC788-5B79-4865-83CE-606D3E6B08CE}</Project>
-      <Name>DesignPrinciples</Name>
-    </ProjectReference>
-    <ProjectReference Include="SOLID\SOLID.csproj">
-      <Project>{85c31acf-35ed-46cc-b320-fcbcffc8ca28}</Project>
-      <Name>SOLID</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
