@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E55DB339-3EB6-4714-905E-1753FEA1C194}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WPCSharp</RootNamespace>
-    <AssemblyName>WPCSharp</AssemblyName>
+    <ProjectGuid>{CA2F80CC-99AE-4B13-8012-2D4D4AC953FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BehavioralDesignPatterns</RootNamespace>
+    <AssemblyName>BehavioralDesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,44 +32,51 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ChainOfResponsibility\Button.cs" />
+    <Compile Include="ChainOfResponsibility\Client.cs" />
+    <Compile Include="ChainOfResponsibility\Component.cs" />
+    <Compile Include="ChainOfResponsibility\Container.cs" />
+    <Compile Include="ChainOfResponsibility\TextBox.cs" />
+    <Compile Include="Command\Client.cs" />
+    <Compile Include="Command\CommandsInvoker.cs" />
+    <Compile Include="Command\Garden.cs" />
+    <Compile Include="Command\GardenActions.cs" />
+    <Compile Include="Command\GardenCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Iterator\Buffer.cs" />
+    <Compile Include="Iterator\BufferIterator.cs" />
+    <Compile Include="Iterator\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BehavioralDesignPatterns\BehavioralDesignPatterns.csproj">
-      <Project>{ca2f80cc-99ae-4b13-8012-2d4d4ac953fb}</Project>
-      <Name>BehavioralDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StructuralDesignPatterns\StructuralDesignPatterns.csproj">
-      <Project>{58ca2a9d-1506-4449-8e19-1d3cbefe396f}</Project>
-      <Name>StructuralDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="CreationalDesignPatterns\CreationalDesignPatterns.csproj">
-      <Project>{d7aebefc-85f7-41d1-94c9-5affbb634579}</Project>
-      <Name>CreationalDesignPatterns</Name>
-    </ProjectReference>
-    <ProjectReference Include="DesignPrinciples\DesignPrinciples.csproj">
-      <Project>{4DCBC788-5B79-4865-83CE-606D3E6B08CE}</Project>
-      <Name>DesignPrinciples</Name>
-    </ProjectReference>
-    <ProjectReference Include="SOLID\SOLID.csproj">
-      <Project>{85c31acf-35ed-46cc-b320-fcbcffc8ca28}</Project>
-      <Name>SOLID</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
