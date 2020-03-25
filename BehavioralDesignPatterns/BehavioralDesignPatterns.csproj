@@ -72,6 +72,12 @@
     <Compile Include="Iterator\Buffer.cs" />
     <Compile Include="Iterator\BufferIterator.cs" />
     <Compile Include="Iterator\Client.cs" />
+    <Compile Include="Mediator\Chat.cs" />
+    <Compile Include="Mediator\ChatMember.cs" />
+    <Compile Include="Mediator\Client.cs" />
+    <Compile Include="Mediator\IChatMediator.cs" />
+    <Compile Include="Mediator\Bot.cs" />
+    <Compile Include="Mediator\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
