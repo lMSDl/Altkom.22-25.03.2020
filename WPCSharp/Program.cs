@@ -12,7 +12,7 @@ namespace WPCSharp
     {
         static void Main(string[] args)
         {
-            BehavioralDesignPatterns.Mediator.Client.Execute();
+            BehavioralDesignPatterns.Visitor.Client.Execute();
 
             Console.ReadKey();
         }

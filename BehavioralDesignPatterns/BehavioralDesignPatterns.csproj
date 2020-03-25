@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\WPCSharp\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -78,10 +81,45 @@
     <Compile Include="Mediator\IChatMediator.cs" />
     <Compile Include="Mediator\Bot.cs" />
     <Compile Include="Mediator\User.cs" />
+    <Compile Include="Memento\Client.cs" />
+    <Compile Include="Memento\GenericCaretaker.cs" />
+    <Compile Include="Memento\IMemento.cs" />
+    <Compile Include="Memento\IRestorable.cs" />
+    <Compile Include="Memento\Memento.cs" />
+    <Compile Include="Memento\Person.cs" />
+    <Compile Include="Observer\Client.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\ObserverB.cs" />
+    <Compile Include="Observer\ObserverA.cs" />
+    <Compile Include="Observer\Subject.cs" />
+    <Compile Include="Observer\Unsubscribe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\Client.cs" />
+    <Compile Include="State\CoffeeMachine.cs" />
+    <Compile Include="State\HeatingUpState.cs" />
+    <Compile Include="State\IdleState.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="State\WorkingState.cs" />
+    <Compile Include="Strategy\CalcStrategy.cs" />
+    <Compile Include="Strategy\Calculator.cs" />
+    <Compile Include="Strategy\Client.cs" />
+    <Compile Include="TemplateMethod\Client.cs" />
+    <Compile Include="TemplateMethod\DatabaseLogger.cs" />
+    <Compile Include="TemplateMethod\EmailLogger.cs" />
+    <Compile Include="TemplateMethod\FileLogger.cs" />
+    <Compile Include="TemplateMethod\Logger.cs" />
+    <Compile Include="TemplateMethod\Service.cs" />
+    <Compile Include="Visitor\Cart.cs" />
+    <Compile Include="Visitor\Basket.cs" />
+    <Compile Include="Visitor\BoxedProduct.cs" />
+    <Compile Include="Visitor\Client.cs" />
+    <Compile Include="Visitor\IElement.cs" />
+    <Compile Include="Visitor\IVisitor.cs" />
+    <Compile Include="Visitor\Product.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
